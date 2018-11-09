@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fekrah.toktokcustomer">
+
+    <!-- Required to check whether user has network connection or not -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Dangerous Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.fekrah.toktokcustomer.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:resizeableActivity="false"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAnKvay92-zyf4Or37UL6tsEF7BL8PiC6U" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.OldMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.ResetPassword"
+
+            android:parentActivityName="com.fekrah.toktokcustomer.activities.LoginActivity"
+            android:screenOrientation="portrait"
+
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.LoginActivity"
+
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.SplashActivity"
+
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.Buttons"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name="com.fekrah.toktokcustomer.activities.MyMapActivity" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.MainActivity"
+            android:label="بالعافية"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.SampleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.OrdersActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.CurrentOrderActivity"
+            android:label="@string/current_trip"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.DriverForOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.ChatsRoomsActivity"
+            android:label="@string/Chats"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/UCrop" />
+        <activity
+            android:name="com.fekrah.toktokcustomer.places.PlacesActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+        </activity>
+        <activity
+            android:name="com.fekrah.toktokcustomer.activities.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <service android:name="com.fekrah.toktokcustomer.MessagesIntentService"/>
+    </application>
+
+</manifest>
